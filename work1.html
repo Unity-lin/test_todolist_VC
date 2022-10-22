@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class = "label_List"> 
+        <li>
+            <label class = "label_1"> 1. text </label>
+        </li>
+        <li>
+            <label class = "label_2"> 2. text </label>
+        </li>
+        <li>
+            <label class = "label_3"> 3. text </label>
+        </li>
+        <li>
+            <label class = "label_4"> 4. text </label>
+        </li>
+    </ul>
+    <button class="text_1"> 1번 </button>
+    <button class="text_2"> 2번 </button>
+    <button class="text_3"> 3번 </button>
+    <button class="text_4"> 4번 </button>
+    <button class="text_all"> 모두 </button>
+</body>
+<script>
+    const Button1 = document.querySelector(".text_1");
+    const Button2 = document.querySelector(".text_2");
+    const Button3 = document.querySelector(".text_3");
+    const Button4 = document.querySelector(".text_4");
+    const ButtonAll = document.querySelector(".text_all");
+
+    Button1.addEventListener('click', addEvent);
+    Button2.addEventListener('click', addEvent);
+    Button3.addEventListener('click', addEvent);
+    Button4.addEventListener('click', addEvent);
+    ButtonAll.addEventListener('click', addEvent);
+
+    function addEvent(e) {
+        e.preventDefault();
+        const newButton = document.createElement("li");
+        newButton.innerText = 
+    }
+</script>
+</html>
