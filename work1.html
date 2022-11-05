@@ -8,18 +8,12 @@
 </head>
 <body>
     <ul class = "label_List"> 
-        <li>
-            <label class = "label_1"> 1. text </label>
-        </li>
-        <li>
-            <label class = "label_2"> 2. text </label>
-        </li>
-        <li>
-            <label class = "label_3"> 3. text </label>
-        </li>
-        <li>
-            <label class = "label_4"> 4. text </label>
-        </li>
+        
+            <input class = "label_1"> 1. text </input>
+            <input class = "label_2"> 2. test </input>
+            <input class = "label_3"> 3. tetris </input>
+            <input class = "label_4"> 4. toch </input>
+        
     </ul>
     <button class="text_1"> 1번 </button>
     <button class="text_2"> 2번 </button>
@@ -40,10 +34,27 @@
     Button4.addEventListener('click', addEvent);
     ButtonAll.addEventListener('click', addEvent);
 
-    function addEvent(e) {
+    //todo 나중에는 합치기.
+    function addEvent1(e) {
         e.preventDefault();
         const newButton = document.createElement("li");
         newButton.innerText = 
     }
+    function addEvent2(e) {
+        e.preventDefault();
+        const newButton = document.createElement("li");
+        newButton.innerText = 
+    }
+    function eventAll(event) {
+        console.log({
+            type: event.type,
+            id: event.target.id,
+            name: event.target.name,
+            value: event.target.value,
+        });
+            
+        }
+        
+    
 </script>
 </html>
