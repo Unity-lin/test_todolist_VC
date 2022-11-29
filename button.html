@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+	body{
+		/* background-color: blue; */
+	}
+
+    .click{
+        background-color: blue;
+        text-decoration-color: red;
+    }
+</style>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<button type = "button" id = "btn1" class = "todo_button" value = "0" >버튼을 누르시오.</button>
+	<h1>글자가 바뀝니다.</h1>
+</body>
+<script>
+
+	const todoButton = document.querySelector(".todo_button");
+	const body = document.querySelector('body');
+	const h1 = document.querySelector('h1');
+
+	todoButton.addEventListener("click", clickEvent);
+
+	function clickEvent(event){
+		body.style.backgroundColor = "blue";
+        h1.style.color = "red";
+        const ah1 = document.createElement('h1');
+		ah1.textContent = '안녕하세요';
+        console.log(ah1);
+        
+	}
+
+</script>
+</html>

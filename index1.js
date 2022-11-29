@@ -1,62 +1,59 @@
-const todoButtons = document.querySelectorAll(".todo-button");
-const todoInputs = document.querySelectorAll(".todo-input");
-const todoResult = document.querySelector(".todo-result");
+const todoInput = document.querySelector(".todo-input");
+const todoButton = document.querySelector(".todo-button");
+const todoList = document.querySelector(".todo-list");
 
-todoButtons[0].addEventListener("click", submitTodoHandler);
-todoButtons[1].addEventListener("click", completeHandler);
-todoButtons[2].addEventListener("click", deleteHandler);
+todoButton.addEventListener("click", submitTodoHandler);
+todoList.addEventListener("click", checkedOne);
 
-/* function submitTodoHandler(event) {
-    console.log({
-        type: event.type,
-        id: event.target.id,
-        name: event.target.name,
-        value: event.target.value,
-    });
-    if(event.target.id == "btn1"){                  //submit 버튼 아이디
-        
-    }
-   }
-   */
+
    function submitTodoHandler(event) {
-    if(event.target.id == "btn1"){
-        const h2 = document.createElement('h2');
-        const h2Text = document.createTextNode(todoInputs.value);
-        const button1 = document.createElement('button');
-        const button1Text = document.createTextNode('Done');
-        const button2 = document.createElement('button');
-        const button2Text = document.createTextNode('Delete');
 
-        button1.setAttribute('class', 'todo-button');
-        button1.setAttribute('id', 'btn2');
-        button1.setAttribute('value', '1');
-        button1.setAttribute('type', 'button');
-        button2.setAttribute('class', 'todo-button');
-        button2.setAttribute('id', 'btn3');
-        button2.setAttribute('value', '2');
-        button2.setAttribute('type', 'button');
-        h2.setAttribute('id' , 'h2style');
-        todoResult.appendChild(h2);
-        todoResult.appendChild(button1);
-        todoResult.appendChild(button2);
-        h2.appendChild(h2Text);
-        button1.appendChild(button1Text);
-        button2.appendChild(button2Text);
-    }
-    
+        const todoUl = document.createElement("ul");
+	    todoUl.classList.add("todo");
+        
+        console.log(todoInput.value);
+        const newTodo =  document.createElement("li");
+        newTodo.innerText = todoInput.value;
+
+        newTodo.classList.add("todo-item");
+        todoUl.appendChild(newTodo);
+        todoInput.value = "";
+
+        //Create Completed Button
+        const completedButton = document.createElement("button");
+        completedButton.innerHTML = `DONE`;
+        completedButton.classList.add("complete-btn");
+        todoUl.appendChild(completedButton);
+
+        const trashButton = document.createElement("button");
+        trashButton.innerHTML = 'DELETE';
+        trashButton.classList.add("trash-btn");
+        todoUl.appendChild(trashButton);
+
+        todoList.appendChild(todoUl);
+
    }
-   function deleteHandler(event) {
-    if(event.target.id == "btn3"){          //delete 버튼 아이디    
-                                            //list로 작업해야하나 
-    } 
+   function checkedOne(event) {
+
+    
+    const item = event.target;
+    console.log(item);
+    console.log(item.classList[0]);
+
+    if(item.classList[0] === "trash-btn"){
+        const todoDelete = item.parentElement;
+        todoDelete.remove();
+    }
+
+    if(item.classList[0] === "complete-btn"){
+        const todo = item.parentElement;
+		todo.classList.toggle("completed");
+    }
+
+
    }
    function completeHandler(event) {
-    if(event.target.id == "btn2"){          //Done 버튼 아이디
-        if(event.target.id == "h2style"){       //h2 아이디
-            h2.setAttribute('text-decoration', 'line-through');                          
-            
-        }
-    }   
+    
    }
 
 
