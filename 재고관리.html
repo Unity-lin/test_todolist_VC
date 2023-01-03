@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table style = "text-align: center;" border="1">
+        <thead>
+            <tr>
+                <th> 부품번호 </th>
+                <th> 부품상세내역 </th>
+                <th> 제조년도 </th>
+                <th> 단가 </th>
+                <th> 수량 </th>
+                <th> 납기 </th>
+                <th> 등록일 </th>
+                <th> 관리 </th>
+            </tr>
+        </thead>
+        <tbody class = "main_tbody">
+        </tbody>
+    </table>
+    <p>
+    <button type="button" class = "add_button"> 재고등록 </button>
+    <p></p>
+    <input type="text" class="partNumber_Input"  placeholder="부품번호 : [     ]" required>
+    <input type="text" class="partDetail_Input"  placeholder="부품상세내역 : [     ]" required>
+    <input type="text" class="manufacturingYear_Input"  placeholder="제조년도 : [     ]" required>
+    <input type="text" class="unitCost_Input"  placeholder="단가 : [     ]" required>
+    <input type="text" class="qty_Input"  placeholder="수량 : [     ]" required>
+    <input type="text" class="delivery_Input"  placeholder="납기 : [     ]" required>
+    <p></p>
+    <select>
+        <option> ALL </option>
+        <option> 부품번호 </option>
+        <option> 부품상세내역 </option>
+        <option> 제조년도 </option>
+        <option> 단가 </option>
+        <option> 수량 </option>
+        <option> 납기 </option>
+        <option> 등록일 </option>
+    </select>
+</body>
+<script src="./재고관리.js"></script>
+</html>
