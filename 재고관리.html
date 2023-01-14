@@ -1,48 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <table style = "text-align: center;" border="1">
-        <thead>
-            <tr>
-                <th> 부품번호 </th>
-                <th> 부품상세내역 </th>
-                <th> 제조년도 </th>
-                <th> 단가 </th>
-                <th> 수량 </th>
-                <th> 납기 </th>
-                <th> 등록일 </th>
-                <th> 관리 </th>
-            </tr>
-        </thead>
-        <tbody class = "main_tbody">
-        </tbody>
-    </table>
-    <p>
-    <button type="button" class = "add_button"> 재고등록 </button>
-    <p></p>
-    <input type="text" class="partNumber_Input"  placeholder="부품번호 : [     ]" required>
-    <input type="text" class="partDetail_Input"  placeholder="부품상세내역 : [     ]" required>
-    <input type="text" class="manufacturingYear_Input"  placeholder="제조년도 : [     ]" required>
-    <input type="text" class="unitCost_Input"  placeholder="단가 : [     ]" required>
-    <input type="text" class="qty_Input"  placeholder="수량 : [     ]" required>
-    <input type="text" class="delivery_Input"  placeholder="납기 : [     ]" required>
-    <p></p>
-    <select>
-        <option> ALL </option>
-        <option> 부품번호 </option>
-        <option> 부품상세내역 </option>
-        <option> 제조년도 </option>
-        <option> 단가 </option>
-        <option> 수량 </option>
-        <option> 납기 </option>
-        <option> 등록일 </option>
-    </select>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>부품관리목록</title>
+    </head>
+    <body>
+        <div class = "wrapper">
+            <div class="header"> 상단영역 </div>
+                <div class = "container">
+                    <div class="menu-left"> 좌측영역 </div>
+                    <div class="content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>부품번호</th>
+                                    <th>부품상세내역</th>
+                                    <th>제조년도</th>
+                                    <th>단가</th>
+                                    <th>수량</th>
+                                    <th>등록일</th>
+                                    <th>관리</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>부품상세내역</td>
+                                    <td>2021</td>
+                                    <td>1000</td>
+                                    <td>10</td>
+                                    <td>2021-01-01</td>
+                                    <td>
+                                        <button>수정</button>
+                                        <button>삭제</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>부품상세내역</td>
+                                    <td>2021</td>
+                                    <td>1000</td>
+                                    <td>10</td>
+                                    <td>2021-01-01</td>
+                                    <td>
+                                        <button>수정</button>
+                                        <button>삭제</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><input type="text" value="부품상세내역"/> </td>
+                                    <td><input type="text" value="2021"/> </td>
+                                    <td><input type="text" value="1000"/> </td>
+                                    <td><input type="text" value="10"/> </td>
+                                    <td>2021-01-01</td>
+                                    <td>
+                                        <button>완료</button>
+                                        <button>삭제</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <button type="button" class = "add_button"> 재고등록 </button>
+                        
+                        <input type="text" class="partNumber_Input"  placeholder="부품번호를 입력" required>
+                        <input type="text" class="partDetail_Input"  placeholder="부품상세내역을 입력" required>
+                        <input type="text" class="manufacturingYear_Input"  placeholder="제조년도를 입력" required>
+                        <input type="text" class="unitCost_Input"  placeholder="단가를 입력" required>
+                        <input type="text" class="qty_Input"  placeholder="수량을 입력" required>
+                        <input type="text" class="delivery_Input"  placeholder="납기를 입력" required>
+                        
+                    </div>
+
+                    </div>
+                    <div class="search">
+                        <select>
+                            <option> ALL </option>
+                            <option> 부품번호 </option>
+                            <option> 부품상세내역 </option>
+                            <option> 제조년도 </option>
+                            <option> 단가 </option>
+                            <option> 수량 </option>
+                            <option> 납기 </option>
+                            <option> 등록일 </option>
+                        </select>
+                        <input type = "text" class="search_Input" placeholder="검색명을 입력하세요" required> <button>검색하기</button>
+
+                        
+                    </div>
+                    <div class="content-right"> 우측영역 </div>
+            </div>
+            <div class="footer"> 하단영역 </div>
+        </div>
+    </body>
 <script src="./재고관리.js"></script>
 </html>

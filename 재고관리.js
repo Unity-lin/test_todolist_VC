@@ -51,7 +51,13 @@ function addpart(e) {
     }
 
 }
+function filter(e) {        //필터함수
+    e.preventDefault();
+    
+}
+function search(e){         //검색함수
 
+}
 const validatePart = () => {
     if(partNumData.value === "" || partDetailData.value === "" || factoringYearData.value === "" 
     || unitCostData.value === "" || qtyData.value === "" || deliveryData.value === ""){

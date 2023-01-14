@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascriptTest</title>
+</head>
+<body>
+    <h1>javascriptTest</h1>
+
+	<p id='result'></p>
+</body>
+<script>
+    const result = document.querySelector("#result"); //getElmentbyID
+
+    const cars = ["Saab", "Volvo", "BMW"];
+    //cars.push("Audi");
+    //cars[0] = "Toyota";
+    cars[0] = "현대";
+    cars[1] = "기아";
+    cars[2] = "테슬라";
+    cars.push("쉐보레");
+    result.textContent = cars;
+</script>
+</html>
