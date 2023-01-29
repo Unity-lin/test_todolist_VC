@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> javascript Html Events </h1>
+
+    <button id = "btn" type = "button"><div id='result'>The time is?</div></button> 
+</body>
+<script>
+    let result = document.querySelector('#result');
+    const button = document.querySelector("#btn");
+
+    button.addEventListener('click', todayTime);
+
+    const today = Date.now();
+    const todayTimes = new Date(today);
+
+    function todayTime() {
+         result.textContent = todayTimes.toString();
+    }
+</script>
+</html>
